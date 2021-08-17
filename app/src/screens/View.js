@@ -7,13 +7,12 @@ class View extends React.Component {
     return (
       <div className="App-header ">
         <div>
-          <h2>View Contact</h2>
-          <h3>{contact.name}</h3>
-          <span>{contact.email}</span>
-          <br />
-          <span>{contact.phone}</span>
-          <br />
-          <br />
+          <h1 className="Home-h2">View Contact</h1>
+          <h2>Name : {contact.name}</h2>
+          <h2>Email : {contact.email}</h2>
+
+          <h2>Phone : {contact.phone}</h2>
+
           <Link
             to={{
               pathname: "/edit",

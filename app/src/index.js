@@ -64,7 +64,9 @@ class App extends React.Component {
           render={(routeProps) => (
             <div className="App-header ">
               <h2 className="Home-h2">React Contact Manager</h2>
-              <Link to="/contacts">View Contacts</Link>
+              <Link to="/contacts" className="my-a">
+                View Contacts
+              </Link>
             </div>
           )}
           exact

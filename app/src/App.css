@@ -19,8 +19,15 @@ body {
   color: coral;
   font-weight: 900;
 }
-.App-header a:hover{
+.my-a{
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid coral;
+}
+
+.my-a :hover{
   color: indianred;
+  border: 2px solid indianred;
 }
 .Home-h2 {
   font-size: 4em;
@@ -79,6 +86,7 @@ table.GeneratedTable thead {
 
 button {
   padding: 5px;
+  border-radius: 5px;
   font-size: 0.7em;
   margin-top: 20px;
   background-color: indianred;
@@ -96,4 +104,11 @@ label {
 }
 .form-label-div {
   margin: 10px 0;
+}
+.btn-div{
+  display: flex;
+}
+.btn-div button{
+  margin-right: 10px ;
+  border-radius: 5px;
 }

@@ -83,9 +83,15 @@ class Contacts extends React.Component {
             ))}
           </table>
 
-          <Link to="/add">
-            <button>New Contact</button>
-          </Link>
+          <div className="btn-div">
+            <Link to="/add">
+              <button>New Contact</button>
+            </Link>
+
+            <Link to="/">
+              <button>Home</button>
+            </Link>
+          </div>
         </div>
       </div>
     );
