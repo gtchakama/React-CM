@@ -5,12 +5,19 @@ const FormInput = (props) => {
 
   return (
     <div>
-      <label>
-        {label}
-        {props.required && <span style={{ color: "red" }}>*</span>}
-      </label>
-      <br />
-      <input name={name} value={value} onChange={onChange} />
+      <div className="form-label-div ">
+        <label>
+          {label}
+          {props.required && <span style={{ color: "red" }}>*</span>}
+        </label>
+        <br />
+        <input
+          className="search"
+          name={name}
+          value={value}
+          onChange={onChange}
+        />
+      </div>
     </div>
   );
 };
