@@ -51,32 +51,34 @@ class Edit extends React.Component {
     }
 
     return (
-      <div>
-        <h2>Edit Contact</h2>
-        <FormInput
-          value={this.state.name}
-          label="Name"
-          onChange={this.onChange}
-          name="name"
-        />
-        <FormInput
-          value={this.state.email}
-          label="Email"
-          onChange={this.onChange}
-          name="email"
-        />
-        <FormInput
-          value={this.state.phone}
-          label="Contact"
-          name="phone"
-          onChange={this.onChange}
-        />
-        <br />
-        <button onClick={this.editContact}>Edit Contact</button>
-        <br />
-        <br />
+      <div className="App-header ">
+        <div>
+          <h2>Edit Contact</h2>
+          <FormInput
+            value={this.state.name}
+            label="Name"
+            onChange={this.onChange}
+            name="name"
+          />
+          <FormInput
+            value={this.state.email}
+            label="Email"
+            onChange={this.onChange}
+            name="email"
+          />
+          <FormInput
+            value={this.state.phone}
+            label="Contact"
+            name="phone"
+            onChange={this.onChange}
+          />
+          <br />
+          <button onClick={this.editContact}>Edit Contact</button>
+          <br />
+          <br />
 
-        <button onClick={this.props.history.goBack}>Cancel</button>
+          <button onClick={this.props.history.goBack}>Cancel</button>
+        </div>
       </div>
     );
   }
