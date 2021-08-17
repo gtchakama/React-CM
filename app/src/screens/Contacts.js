@@ -50,25 +50,43 @@ class Contacts extends React.Component {
     }
 
     return (
-      <div>
-        <h2>Contacts</h2>
-        <Link to="/add">
-          <button>Add</button>
-        </Link>
-        <br />
-        <br />
-        <label>Search </label>
-        <input
-          value={this.state.search}
-          onChange={(e) => this.setState({ search: e.target.value })}
-        />
-        <ul>
-          {contactsToShow.map((contact) => (
-            <li key={contact.id} onClick={() => this.contactClicked(contact)}>
-              {contact.name} - {contact.email} - {contact.phone}
-            </li>
-          ))}
-        </ul>
+      <div className="App-header ">
+        <div>
+          <h2 className="Home-h2">Contacts</h2>
+
+          <input
+            className="search"
+            value={this.state.search}
+            placeholder="search contacts"
+            onChange={(e) => this.setState({ search: e.target.value })}
+          />
+
+          <table className="GeneratedTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone </th>
+              </tr>
+            </thead>
+            {contactsToShow.map((contact) => (
+              <tbody>
+                <tr
+                  key={contact.id}
+                  onClick={() => this.contactClicked(contact)}
+                >
+                  <td>{contact.name}</td>
+                  <td>{contact.email}</td>
+                  <td>{contact.phone}</td>
+                </tr>
+              </tbody>
+            ))}
+          </table>
+
+          <Link to="/add">
+            <button>New Contact</button>
+          </Link>
+        </div>
       </div>
     );
   }

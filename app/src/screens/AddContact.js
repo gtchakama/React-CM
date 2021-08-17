@@ -31,14 +31,16 @@ class AddContact extends React.Component {
     }
 
     return (
-      <div>
-        <h2>Add Contact</h2>
-        <FormInput label="Name" onChange={this.onChange} name="name" />
-        <FormInput label="Email" onChange={this.onChange} name="email" />
-        <FormInput label="Contact" name="phone" onChange={this.onChange} />
-        <button onClick={this.addContact}>Add Contact</button>
+      <div className="App-header ">
+        <div>
+          <h2>Add Contact</h2>
+          <FormInput  label="Name" onChange={this.onChange} name="name" />
+          <FormInput label="Email" onChange={this.onChange} name="email" />
+          <FormInput label="Contact" name="phone" onChange={this.onChange} />
+          <button onClick={this.addContact}>Add Contact</button>
 
-        <button onClick={this.props.history.goBack}>Cancel</button>
+          <button onClick={this.props.history.goBack}>Cancel</button>
+        </div>
       </div>
     );
   }
