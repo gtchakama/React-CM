@@ -62,9 +62,9 @@ class App extends React.Component {
         <Route
           path="/"
           render={(routeProps) => (
-            <div>
-              <h2>My Apps</h2>
-              <Link to="/contacts">Contacts</Link>
+            <div className="App-header ">
+              <h2 className="Home-h2">React Contact Manager</h2>
+              <Link to="/contacts">View Contacts</Link>
             </div>
           )}
           exact
